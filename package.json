@@ -5,7 +5,7 @@
     "build": "expo export:web",
     "start": "yarn build && npx xnft web",
     "bundle": "yarn build && npx xnft bundle",
-    "dev": "BROWSER=none expo start --web & npx xnft --iframe http://localhost:19006"
+    "dev": "expo start --web & npx xnft --iframe http://localhost:19006"
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.27.0",
@@ -28,7 +28,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-error-overlay": "6.0.11",
-    "react-native": "0.71.3",
+    "react-native": "0.71.8",
     "react-native-gesture-handler": "~2.9.0",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
