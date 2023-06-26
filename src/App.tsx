@@ -4,11 +4,17 @@ import { ActivityIndicator, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { FontAwesome } from '@expo/vector-icons'; 
+import { MaterialIcons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons'; 
 import { useFonts, Inter_900Black } from "@expo-google-fonts/dev";
 
 import { ExamplesScreens } from "./screens/ExamplesScreen";
 import { HomeScreen } from "./screens/HomeScreen";
 import { TokenListNavigator } from "./screens/TokenNavigator";
+import Balance from "./screens/Balance";
+import Transfer from "./screens/Transfer";
+import TransactionHistory from "./screens/TransactionHistory";
 
 const Tab = createBottomTabNavigator();
 
@@ -21,33 +27,32 @@ function TabNavigator() {
       }}
     >
       <Tab.Screen
-        name="Home"
-        component={HomeScreen}
+        name="Balance"
+        component={Balance}
         options={{
-          tabBarLabel: "Home",
+          tabBarLabel: "Balance",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
+            <MaterialIcons name="attach-money" color={color} size={size} />
+          ),
+        }}
+      />
+     <Tab.Screen
+        name="Transfer"
+        component={Transfer}
+        options={{
+          tabBarLabel: "Transfer",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="send" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="List"
-        component={TokenListNavigator}
+        name="Transaction History"
+        component={TransactionHistory}
         options={{
-          headerShown: false,
-          tabBarLabel: "Tokens",
+          tabBarLabel: "Activity",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="bank" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Examples"
-        component={ExamplesScreens}
-        options={{
-          tabBarLabel: "Examples",
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+           <Feather name="activity" color={color} size={size} />
           ),
         }}
       />
