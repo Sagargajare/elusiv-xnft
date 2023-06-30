@@ -3,6 +3,7 @@ import { Event, XnftMetadata } from "@coral-xyz/common-public";
 import { Connection, PublicKey } from "@solana/web3.js";
 import { useEffect, useState } from "react";
 import { XnftWallet } from "../types";
+import React from 'react';
 
 declare global {
   interface Window {
@@ -27,15 +28,19 @@ export function usePublicKey(): PublicKey | undefined {
   return publicKey;
 }
 
-export function usePublicKeys(): { [key: string]: PublicKey }|undefined {
+export function usePublicKeys(): Map<string, string> {
   const didLaunch = useDidLaunch();
-  const [publicKeys, setPublicKeys] = useState();
+  const [publicKeys, setPublicKeys] = useState<Map<string, string>>(new Map());
   useEffect(() => {
     if (didLaunch) {
       window.xnft.on("publicKeysUpdate", () => {
-        setPublicKeys(window.xnft.publicKeys);
+        setPublicKeys(
+          new Map<string, string>(Object.entries(window.xnft.publicKeys))
+        );
       });
-      setPublicKeys(window.xnft.publicKeys);
+      setPublicKeys(
+        new Map<string, string>(Object.entries(window.xnft.publicKeys))
+      );
     }
   }, [didLaunch, setPublicKeys]);
   return publicKeys;

@@ -1,4 +1,4 @@
-import { useColorScheme } from "./xnft-hooks";
+import { useColorScheme } from "./useXnft";
 
 export function useTheme() {
   const colorScheme = useColorScheme();

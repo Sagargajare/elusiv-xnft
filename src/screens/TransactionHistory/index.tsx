@@ -5,7 +5,7 @@ import tw from "twrnc";
 
 type Props = {}
 
-const index = (props: Props) => {
+const Index = (props: Props) => {
   return (
     <Screen>
        <Text style={tw`mb-4 text-md`}>Transfer History</Text>
@@ -13,4 +13,4 @@ const index = (props: Props) => {
   )
 }
 
-export default index
+export default Index
