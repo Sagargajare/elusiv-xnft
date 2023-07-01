@@ -5,10 +5,7 @@ import {
   Connection,
 } from "@solana/web3.js";
 import { useDidLaunch, usePublicKeys } from "./useXnft";
-import { useWallet as useWalletAdapterReact } from "@solana/wallet-adapter-react";
-import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import { useEffect, useMemo, useState } from "react";
-import { isXnft } from "../platform";
 import { Elusiv } from "@elusiv/sdk";
 import { CLUSTER, RPC_URL } from "../constant";
 

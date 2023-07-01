@@ -3,20 +3,14 @@ import { RecoilRoot } from "recoil";
 import { ActivityIndicator, View,Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome } from '@expo/vector-icons'; 
-import { MaterialIcons } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons'; 
 import { useFonts, Inter_900Black } from "@expo-google-fonts/dev";
-
-import { ExamplesScreens } from "./screens/ExamplesScreen";
-import { HomeScreen } from "./screens/HomeScreen";
-import { TokenListNavigator } from "./screens/TokenNavigator";
 import Balance from "./screens/Balance";
 import Transfer from "./screens/Transfer";
 import Topup from "./screens/Topup";
-import TransactionHistory from "./screens/TransactionHistory";
 import { useWallet } from "./hooks/useWallet";
+import { Entypo } from '@expo/vector-icons';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -25,7 +19,13 @@ function TabNavigator() {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: "#e91e63",
+        headerShown: false,
+        tabBarActiveTintColor: "#FFFFFF",
+        tabBarInactiveTintColor: "#7D8FA9",
+        tabBarStyle: {
+					backgroundColor: '#red',
+					borderTopColor: 'transparent',
+				}
       }}
     >
       <Tab.Screen
@@ -34,7 +34,7 @@ function TabNavigator() {
         options={{
           tabBarLabel: "Balance",
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="attach-money" color={color} size={size} />
+            <Entypo name="wallet" color={color} size={size} />
           ),
         }}
       />
@@ -44,7 +44,7 @@ function TabNavigator() {
         options={{
           tabBarLabel: "TopUp",
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="attach-money" color={color} size={size} />
+            <Entypo name="save" color={color} size={size} />
           ),
         }}
       />
@@ -55,16 +55,6 @@ function TabNavigator() {
           tabBarLabel: "Transfer",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="send" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Transaction History"
-        component={TransactionHistory}
-        options={{
-          tabBarLabel: "Activity",
-          tabBarIcon: ({ color, size }) => (
-           <Feather name="activity" color={color} size={size} />
           ),
         }}
       />
