@@ -1,4 +1,4 @@
-# xnft-quickstart
+# Private Wallet build on Elusiv Protocol
 
 Quickstart repo for building your own xNFT.
 
