@@ -46,3 +46,10 @@ yarn start
 ```
 
 Once everything looks good head over to [xnft.gg](https://www.xnft.gg) to publish your xNFT!
+
+
+
+
+|  | |  |
+| :------------ |:---------------:| -----:|
+| ![Balance Screen](/assets/Balance%20Screen.png "Balance Screen")     | ![Topup Screen](/assets/Topup%20Screen.png "Topup Screen") | ![Transfer Screen](/assets/Transfer%20Screen.png "Transfer Screen") |
