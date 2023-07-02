@@ -1,14 +1,9 @@
 # StealthWallet a XNFT build using Elusiv Protocol  
 
-Quickstart repo for building your own xNFT.
+## Demo
+Watch the Demo [Here](https://www.loom.com/share/98d260efa027402eabec38453bbd4626?sid=24491133-2f59-48b2-81ea-575bce5ca248)
 
-## Developing
-
-Once you've installed Backpack, get started building your xNFT with these steps. Note that the packages here will always use the latest, which correspond to the latest tagged build of Backpack. If you have unexepected issues, make sure your package versions match the app version.
-
-Further documentation: https://docs.xnfts.dev/getting-started/getting-started
-
-### Install
+## Installation
 
 First, install dependencies.
 
@@ -24,7 +19,7 @@ Then, run the dev server with hot reloading
 yarn dev
 ```
 
-### Open the Simulator in Backpack
+### Open the Simulator in Backpack (Turn on the dev mode in preferences)
 
 Now that you have your xNFT dev server running, open it in the Backpack simulator to see it run.
 
@@ -44,8 +39,6 @@ Test the newly created build in `dist/index.html` in the simulator:
 ```
 yarn start
 ```
-
-Once everything looks good head over to [xnft.gg](https://www.xnft.gg) to publish your xNFT!
 
 
 
