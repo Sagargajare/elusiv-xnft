@@ -1,4 +1,4 @@
-# Private Wallet build on Elusiv Protocol
+# StealthWallet a XNFT build using Elusiv Protocol  
 
 Quickstart repo for building your own xNFT.
 
