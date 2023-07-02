@@ -1,8 +1,8 @@
 {
-  "name": "xNFT Quickstart",
+  "name": "StealthWallet",
   "version": "0.0.1",
   "storage": "",
-  "description": "React Native Example",
+  "description": "StealthWallet powered by elusiv Protocol",
   "website": "http://wao.gg",
   "kind": "app",
   "icon": {

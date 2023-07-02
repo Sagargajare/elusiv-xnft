@@ -11,6 +11,7 @@ import { usePrivateBalance } from "../../hooks/balance";
 import { Entypo, FontAwesome } from "@expo/vector-icons";
 import SolIcon from "../../icons/Sol";
 import { useNavigation } from "@react-navigation/native";
+import Branding from "../../components/Branding";
 
 type Props = {};
 
@@ -118,11 +119,7 @@ const Index = (props: Props) => {
         </View>
 
         {/* Powered By */}
-        <View style={tw`flex flex-row mt-10 justify-center`}>
-          <Text style={tw`text-sm text-[#CBD3DD]`}>
-            Powered By Elusiv Protocol
-          </Text>
-        </View>
+        <Branding/>
       </View>
     </Screen>
   );
